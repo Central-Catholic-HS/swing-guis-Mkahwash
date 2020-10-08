@@ -1,0 +1,38 @@
+package com.central.practice;
+import javax.swing.JOptionPane;
+
+
+public class DialogBoxPractice {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String temp1, temp2, temp3;
+		
+		temp1 = JOptionPane.showInputDialog("Enter your temperature from Monday: ");
+		double actualTemp1 = Double.parseDouble(temp1);
+		
+		temp2 = JOptionPane.showInputDialog("Enter your temperature from Tuesday: ");
+		double actualTemp2 = Double.parseDouble(temp2);
+		
+		temp3 = JOptionPane.showInputDialog("Enter your temperature from Wednesday: ");
+		double actualTemp3 = Double.parseDouble(temp3);
+		
+		double averageTemp = (actualTemp1 + actualTemp2 + actualTemp3)/3;
+		
+		
+		if(averageTemp > 98.6){
+		
+			JOptionPane.showMessageDialog(null, "DONT COME TO SCHOOL! Your average tempature (" + averageTemp + ") is too high." );
+
+		}
+		
+		else {
+			JOptionPane.showMessageDialog(null, "You are okay to come to school today. Your average temperature is " + averageTemp); 
+		}
+		
+		System.exit(0);
+		
+	}
+
+}
